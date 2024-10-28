@@ -1,0 +1,22 @@
+def is_fibonacci():
+
+    num = int(input("Digite um número para verificar se ele pertence à sequência de Fibonacci: "))
+
+    if num == 0 or num == 1:
+        return f"O número {num} pertence à sequência de Fibonacci."
+
+    anterior, proximo = 0, 1
+
+    while proximo < num:
+        aux = proximo
+        proximo += anterior
+        anterior = aux
+
+
+    if proximo == num:
+        return f"O número {num} pertence à sequência de Fibonacci."
+    else:
+        return f"O número {num} não pertence à sequência de Fibonacci."
+
+
+print(is_fibonacci())
